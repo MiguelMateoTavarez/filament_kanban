@@ -11,6 +11,8 @@ class Column extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function tasks(): HasMany
     {
         return $this->hasMany(Task::class);
